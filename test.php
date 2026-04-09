@@ -2,8 +2,25 @@
     $name = $_GET['name'];
     $age = $_GET['Age'];
 
-
     $dagar = ["mån", "tis", "ons", "tors", "fre", "lör", "sön"];
+
+    function square($number) {
+        return $number * $number;
+    }
+
+    class Person {
+        public $name;
+        public $age;
+
+        function __construct($name, $age) {
+            $this->name = $name;
+            $this->age = $age;
+        }
+
+        function greet() {
+            return "Hej, jag heter " . $this->name . " och jag är " . $this->age . " år gammal.";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -87,6 +104,18 @@
             ?>
             
         </select>
+        <hr>
+        <h2>Funktioner</h2>
+            <p>
+                Resultat av 5 upphöjt till 2 = <?php echo square(5); ?>
+             </p>
+        <hr>
+            <h2>Klasser</h2>
+
+        <?php
+            $person1 = new Person($name, $age);
+            echo $person1->greet();
+        ?>
 
     </body>
 </html>
