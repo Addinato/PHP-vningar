@@ -1,1 +1,1 @@
-# PHP-vningar
+# PHP-exercises
