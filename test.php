@@ -71,11 +71,21 @@
 
         <hr>
         <select>
+            <h2>Sätt 1</h2>
             <?php
+                for ($i = 0; $i < count($dagar); $i++) {
+                    echo "<option value='$dagar[$i]'>$dagar[$i]</option>";
+                }
+            ?>
+        </select>
+        <select>
+            <h2>Sätt 2</h2>
+             <?php
                 foreach ($dagar as $dag) {
                     echo "<option value='$dag'>$dag</option>";
                 }
             ?>
+            
         </select>
 
     </body>
